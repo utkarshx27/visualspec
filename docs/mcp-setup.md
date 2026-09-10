@@ -42,7 +42,7 @@ Or using `npx`:
   "mcpServers": {
     "visualspec": {
       "command": "npx",
-      "args": ["-y", "visualspec", "mcp"]
+      "args": ["-y", "@utkarshx27/visualspec", "mcp"]
     }
   }
 }

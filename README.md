@@ -75,7 +75,27 @@ Model Adapter           Deterministic Layout
 
 ##  Quickstart
 
-### Installation
+### Instant Run (No Install Required)
+
+```bash
+# Initialize a new VisualSpec workspace
+npx @utkarshx27/visualspec init
+
+# Launch local MCP Server for Cursor, Claude, or Antigravity IDE
+npx @utkarshx27/visualspec mcp
+```
+
+### Or Install Globally
+
+```bash
+npm install -g @utkarshx27/visualspec
+
+# Use CLI commands directly
+visual init
+visual mcp
+```
+
+### Or Build from Source
 
 ```bash
 git clone https://github.com/utkarshx27/visualspec.git
@@ -130,9 +150,10 @@ VisualSpec runs as a native MCP server over `stdio`, enabling AI coding assistan
 
 ```bash
 # Launch MCP server over stdio
-npx visual mcp
-# or
-npm run mcp
+npx @utkarshx27/visualspec mcp
+
+# Or if installed globally
+visual mcp
 ```
 
 ### Available MCP Tools
