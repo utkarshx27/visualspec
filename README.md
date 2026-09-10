@@ -10,6 +10,12 @@
 
 ---
 
+<p align="center">
+  <img src="assets/comparison.png" alt="VisualSpec vs Monolithic AI Image Models" width="100%" />
+</p>
+
+---
+
 ## 💡 The Core Problem
 
 Most image-generation workflows fail for social and marketing graphics because a single natural-language prompt is expected to handle too many concerns at once:
@@ -78,7 +84,7 @@ Model Adapter           Deterministic Layout
 ### Installation
 
 ```bash
-git clone https://github.com/your-username/visualspec.git
+git clone https://github.com/utkarshx27/visualspec.git
 cd visualspec
 npm install
 npm run build
@@ -166,6 +172,10 @@ output/demo-launch/
 
 ## 🛠 Supported Platforms & Templates
 
+<p align="center">
+  <img src="assets/showcase.png" alt="VisualSpec Sample Outputs" width="100%" />
+</p>
+
 ### Platforms
 - **Instagram**: Feed portrait (1080x1350, 4:5), Square (1080x1080, 1:1), Story (1080x1920, 9:16).
 - **LinkedIn**: Feed portrait (1080x1350), Square (1080x1080), Banner (1200x628).
@@ -175,6 +185,10 @@ output/demo-launch/
 - **Product Launch**: High-impact headline, feature pill, product visual region, supporting subhead.
 - **Quote Card**: Center-focused editorial quote, author attribution, minimal atmospheric glow.
 - **Stat Card**: Large numeric hero metric, descriptive label, and data context notes.
+
+<p align="center">
+  <img src="assets/showcase.png" alt="VisualSpec Template Showcase" width="100%" />
+</p>
 
 ---
 
