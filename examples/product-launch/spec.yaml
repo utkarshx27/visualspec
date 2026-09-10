@@ -1,0 +1,102 @@
+version: "0.1"
+
+asset:
+  id: launch-agent-x
+  platform: instagram
+  type: product_launch
+  template: product-launch
+  format: feed_portrait
+
+canvas:
+  width: 1080
+  height: 1350
+  aspect_ratio: "4:5"
+
+intent:
+  objective: product_announcement
+  audience: developers
+  message: "Your AI pair programmer just leveled up."
+  mood:
+    - premium
+    - futuristic
+    - minimal
+
+brand:
+  palette:
+    primary: "#6C5CE7"
+    secondary: "#00D2FF"
+    background: "#09090B"
+    text: "#FFFFFF"
+
+subject:
+  description: "minimal futuristic sleek laptop displaying glowing abstract code visual"
+  placement: lower_center
+  prominence: 0.55
+
+background:
+  description: "dark cinematic atmosphere with soft purple atmospheric glow and fine grain"
+  style: minimal
+  texture: subtle_grain
+
+composition:
+  hierarchy:
+    - badge
+    - headline
+    - supporting
+    - subject
+  focal_point: lower_center
+  negative_space:
+    target: upper_left
+
+text:
+  badge:
+    content: "NEW RELEASE"
+    exact: true
+    placement: upper_left
+  headline:
+    content: "Your AI pair programmer just leveled up."
+    exact: true
+    max_lines: 3
+    placement: upper_third
+    alignment: left
+    typography:
+      family_class: grotesk
+      weight: 700
+      scale: xl
+  supporting:
+    content: "Autonomous reasoning, deterministic execution, and zero hallucinated copy."
+    exact: true
+    placement: below_headline
+    alignment: left
+    typography:
+      family_class: grotesk
+      weight: 400
+      scale: md
+      color: "#94A3B8"
+
+constraints:
+  required:
+    - headline
+    - subject
+  forbid:
+    - extra_text
+    - watermark
+    - people
+    - fake_ui_labels
+  exact:
+    - headline
+    - badge
+
+generation:
+  image_layers:
+    - background
+    - subject
+  deterministic_layers:
+    - badge
+    - headline
+    - supporting
+  variations: 1
+
+output:
+  format: png
+  quality: high

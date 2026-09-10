@@ -1,0 +1,41 @@
+id: quote-card
+version: "0.1"
+name: "Quote Card"
+description: "Minimalist, high-authority quote or testimonial layout with focused typographic hierarchy"
+
+slots:
+  required:
+    - quote
+    - author
+  optional:
+    - title
+    - badge
+    - avatar
+    - logo
+
+layout:
+  badge:
+    region: upper_center
+    prominence: 0.2
+  quote:
+    region: center
+    alignment: center
+    prominence: 0.9
+  author:
+    region: lower_center
+    relation: below_quote
+    alignment: center
+    prominence: 0.6
+  title:
+    region: lower_center
+    relation: below_author
+    alignment: center
+    prominence: 0.4
+  logo:
+    region: upper_right
+    prominence: 0.3
+
+rules:
+  - quote_must_be_prominent
+  - high_contrast_background
+  - author_must_be_distinct_from_quote

@@ -1,0 +1,45 @@
+id: stat-card
+version: "0.1"
+name: "Stat Card"
+description: "Data-driven visual emphasizing a massive metric with supporting context and source attribution"
+
+slots:
+  required:
+    - metric
+    - label
+  optional:
+    - context
+    - source
+    - badge
+    - logo
+
+layout:
+  badge:
+    region: upper_left
+    prominence: 0.2
+  metric:
+    region: center
+    alignment: center
+    prominence: 1.0
+  label:
+    region: center
+    relation: below_metric
+    alignment: center
+    prominence: 0.6
+  context:
+    region: lower_center
+    relation: below_label
+    alignment: center
+    prominence: 0.4
+  source:
+    region: lower_left
+    alignment: left
+    prominence: 0.3
+  logo:
+    region: upper_right
+    prominence: 0.3
+
+rules:
+  - metric_must_be_largest_element
+  - label_must_be_closely_coupled_to_metric
+  - source_must_not_distract

@@ -1,0 +1,46 @@
+{
+  "name": "visualspec",
+  "version": "0.1.0",
+  "description": "A structured visual-generation framework and skill system for AI agents",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "visual": "./bin/visual.js",
+    "vspec": "./bin/visual.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "visual": "tsx src/cli/index.ts",
+    "mcp": "tsx src/mcp/index.ts"
+  },
+  "keywords": [
+    "visual-generation",
+    "ai-agents",
+    "generative-ai",
+    "deterministic-rendering",
+    "design-system",
+    "social-media"
+  ],
+  "author": "",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "sharp": "^0.33.5",
+    "yaml": "^2.7.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.7"
+  }
+}

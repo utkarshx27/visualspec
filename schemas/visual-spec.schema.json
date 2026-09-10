@@ -1,0 +1,171 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "VisualSpec",
+  "description": "VisualSpec Specification v0.1",
+  "type": "object",
+  "required": ["version", "asset"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "enum": ["0.1"]
+    },
+    "asset": {
+      "type": "object",
+      "required": ["platform"],
+      "properties": {
+        "id": { "type": "string" },
+        "platform": { "type": "string" },
+        "type": { "type": "string" },
+        "template": { "type": "string" },
+        "format": { "type": "string" }
+      }
+    },
+    "canvas": {
+      "type": "object",
+      "properties": {
+        "width": { "type": "integer", "minimum": 100, "maximum": 8192 },
+        "height": { "type": "integer", "minimum": 100, "maximum": 8192 },
+        "aspect_ratio": { "type": "string" }
+      }
+    },
+    "intent": {
+      "type": "object",
+      "properties": {
+        "objective": { "type": "string" },
+        "audience": { "type": "string" },
+        "message": { "type": "string" },
+        "mood": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "brand": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "palette": {
+          "type": "object",
+          "properties": {
+            "primary": { "type": "string" },
+            "secondary": { "type": "string" },
+            "background": { "type": "string" },
+            "text": { "type": "string" },
+            "accent": { "type": "string" }
+          }
+        },
+        "logo": {
+          "type": "object",
+          "properties": {
+            "source": { "type": "string" },
+            "placement": { "type": "string" }
+          }
+        }
+      }
+    },
+    "subject": {
+      "type": "object",
+      "properties": {
+        "description": { "type": "string" },
+        "placement": { "type": "string" },
+        "prominence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "details": { "type": "string" }
+      }
+    },
+    "background": {
+      "type": "object",
+      "properties": {
+        "description": { "type": "string" },
+        "type": { "type": "string" },
+        "style": { "type": "string" },
+        "mood": { "type": "string" },
+        "texture": { "type": "string" },
+        "colors": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "composition": {
+      "type": "object",
+      "properties": {
+        "hierarchy": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "focal_point": { "type": "string" },
+        "negative_space": {
+          "type": "object",
+          "properties": {
+            "target": { "type": "string" }
+          }
+        }
+      }
+    },
+    "text": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["content"],
+        "properties": {
+          "content": { "type": "string" },
+          "exact": { "type": "boolean" },
+          "max_lines": { "type": "integer", "minimum": 1 },
+          "placement": { "type": "string" },
+          "alignment": { "type": "string", "enum": ["left", "center", "right"] },
+          "typography": {
+            "type": "object",
+            "properties": {
+              "family_class": { "type": "string", "enum": ["grotesk", "serif", "mono", "geometric"] },
+              "weight": { "type": "integer", "enum": [300, 400, 500, 600, 700, 800, 900] },
+              "scale": { "type": "string", "enum": ["xs", "sm", "md", "lg", "xl", "2xl", "3xl"] },
+              "color": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "properties": {
+        "required": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "forbid": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "preserve": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "exact": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "generation": {
+      "type": "object",
+      "properties": {
+        "image_layers": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "deterministic_layers": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "variations": { "type": "integer", "minimum": 1, "maximum": 10 }
+      }
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "format": { "type": "string", "enum": ["png", "jpeg", "webp"] },
+        "quality": { "type": "string", "enum": ["high", "medium", "low"] }
+      }
+    }
+  }
+}

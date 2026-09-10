@@ -1,0 +1,103 @@
+version: "0.1"
+
+asset:
+  id: quote-agentic-coding
+  platform: linkedin
+  type: quote_card
+  template: quote-card
+  format: square
+
+canvas:
+  width: 1080
+  height: 1080
+  aspect_ratio: "1:1"
+
+intent:
+  objective: thought_leadership
+  audience: tech_leaders
+  message: "Deterministic structure beats prompt brute-force every time."
+  mood:
+    - thoughtful
+    - authoritative
+    - minimal
+
+brand:
+  palette:
+    primary: "#00D2FF"
+    secondary: "#6C5CE7"
+    background: "#09090B"
+    text: "#FFFFFF"
+
+background:
+  description: "deep obsidian textured gradient with subtle radial cyan glow"
+  style: editorial
+  texture: subtle_grain
+
+composition:
+  hierarchy:
+    - badge
+    - quote
+    - author
+    - title
+  focal_point: center
+
+text:
+  badge:
+    content: "ENGINEERING PRINCIPLE"
+    exact: true
+    placement: upper_left
+  quote:
+    content: "Deterministic structure beats prompt brute-force every single time."
+    exact: true
+    max_lines: 3
+    placement: center
+    alignment: center
+    typography:
+      family_class: serif
+      weight: 600
+      scale: xl
+  author:
+    content: "Dr. Elena Vance"
+    exact: true
+    placement: lower_center
+    alignment: center
+    typography:
+      family_class: grotesk
+      weight: 600
+      scale: md
+      color: "#00D2FF"
+  title:
+    content: "Head of AI Systems"
+    exact: true
+    placement: below_author
+    alignment: center
+    typography:
+      family_class: grotesk
+      weight: 400
+      scale: sm
+      color: "#94A3B8"
+
+constraints:
+  required:
+    - quote
+    - author
+  forbid:
+    - extra_text
+    - watermark
+    - clip_art
+  exact:
+    - quote
+    - author
+
+generation:
+  image_layers:
+    - background
+  deterministic_layers:
+    - badge
+    - quote
+    - author
+    - title
+
+output:
+  format: png
+  quality: high

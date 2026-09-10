@@ -1,0 +1,43 @@
+platform: generic-social
+displayName: "Generic Social Media"
+
+formats:
+  square:
+    width: 1080
+    height: 1080
+    aspect_ratio: "1:1"
+    safe_margin:
+      top: 60
+      right: 60
+      bottom: 60
+      left: 60
+
+  feed_portrait:
+    width: 1080
+    height: 1350
+    aspect_ratio: "4:5"
+    safe_margin:
+      top: 72
+      right: 64
+      bottom: 72
+      left: 64
+
+  landscape:
+    width: 1200
+    height: 675
+    aspect_ratio: "16:9"
+    safe_margin:
+      top: 50
+      right: 60
+      bottom: 50
+      left: 60
+
+guidance:
+  max_primary_text_blocks: 3
+  prefer_large_headline: true
+  mobile_first: true
+
+anti_patterns:
+  - tiny_text
+  - edge_aligned_headline
+  - excessive_information_density

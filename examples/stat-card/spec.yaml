@@ -1,0 +1,103 @@
+version: "0.1"
+
+asset:
+  id: stat-zero-hallucination
+  platform: linkedin
+  type: stat_card
+  template: stat-card
+  format: feed_portrait
+
+canvas:
+  width: 1080
+  height: 1350
+  aspect_ratio: "4:5"
+
+intent:
+  objective: benchmark_proof
+  audience: enterprise
+  message: "100% exact text rendering achieved with zero hallucinations."
+  mood:
+    - data_driven
+    - bold
+    - high_contrast
+
+brand:
+  palette:
+    primary: "#10B981"
+    secondary: "#3B82F6"
+    background: "#09090B"
+    text: "#FFFFFF"
+
+background:
+  description: "dark grid backdrop with atmospheric emerald green glow"
+  style: technical
+  texture: subtle_grain
+
+composition:
+  hierarchy:
+    - badge
+    - metric
+    - label
+    - context
+  focal_point: center
+
+text:
+  badge:
+    content: "BENCHMARK RESULT"
+    exact: true
+    placement: upper_left
+  metric:
+    content: "100%"
+    exact: true
+    placement: center
+    alignment: center
+    typography:
+      family_class: geometric
+      weight: 800
+      scale: 3xl
+      color: "#10B981"
+  label:
+    content: "Exact Headline Copy Compliance"
+    exact: true
+    max_lines: 2
+    placement: below_metric
+    alignment: center
+    typography:
+      family_class: grotesk
+      weight: 700
+      scale: lg
+  context:
+    content: "Deterministic layout engine completely eliminates AI typography hallucinations."
+    exact: true
+    max_lines: 3
+    placement: below_label
+    alignment: center
+    typography:
+      family_class: grotesk
+      weight: 400
+      scale: md
+      color: "#94A3B8"
+
+constraints:
+  required:
+    - metric
+    - label
+  forbid:
+    - extra_text
+    - watermark
+  exact:
+    - metric
+    - label
+
+generation:
+  image_layers:
+    - background
+  deterministic_layers:
+    - badge
+    - metric
+    - label
+    - context
+
+output:
+  format: png
+  quality: high

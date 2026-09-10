@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PlatformPack",
+  "description": "Platform rules and constraint pack",
+  "type": "object",
+  "required": ["platform", "formats"],
+  "properties": {
+    "platform": { "type": "string" },
+    "displayName": { "type": "string" },
+    "formats": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["width", "height"],
+        "properties": {
+          "width": { "type": "integer" },
+          "height": { "type": "integer" },
+          "aspect_ratio": { "type": "string" },
+          "safe_margin": {
+            "type": "object",
+            "properties": {
+              "top": { "type": "integer" },
+              "right": { "type": "integer" },
+              "bottom": { "type": "integer" },
+              "left": { "type": "integer" }
+            }
+          }
+        }
+      }
+    },
+    "guidance": {
+      "type": "object",
+      "properties": {
+        "max_primary_text_blocks": { "type": "integer" },
+        "prefer_large_headline": { "type": "boolean" },
+        "mobile_first": { "type": "boolean" }
+      }
+    },
+    "anti_patterns": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

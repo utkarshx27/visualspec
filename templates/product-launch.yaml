@@ -1,0 +1,43 @@
+id: product-launch
+version: "0.1"
+name: "Product Launch"
+description: "High impact announcement visual for products, features, or tools with clear headline and focal product rendering"
+
+slots:
+  required:
+    - headline
+    - subject
+  optional:
+    - supporting
+    - badge
+    - cta
+    - logo
+
+layout:
+  badge:
+    region: upper_left
+    prominence: 0.2
+  headline:
+    region: upper_third
+    alignment: left
+    prominence: 0.8
+  supporting:
+    region: upper_third
+    relation: below_headline
+    alignment: left
+    prominence: 0.5
+  subject:
+    region: lower_two_thirds
+    prominence: 0.7
+  cta:
+    region: lower_left
+    prominence: 0.4
+  logo:
+    region: upper_right
+    prominence: 0.3
+
+rules:
+  - headline_must_have_high_contrast
+  - subject_must_not_overlap_headline
+  - reserve_negative_space_for_text
+  - max_headline_lines_3
