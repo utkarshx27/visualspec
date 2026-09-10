@@ -1,0 +1,11 @@
+node_modules/
+output/
+coverage/
+.env
+.env.*
+*.log
+.DS_Store
+tests/
+.github/
+visual-generation-superpowers-implementation-plan.md
+vitest.config.ts

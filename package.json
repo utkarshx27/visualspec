@@ -1,12 +1,22 @@
 {
   "name": "visualspec",
   "version": "0.1.0",
-  "description": "A structured visual-generation framework and skill system for AI agents",
+  "description": "Structured, constraint-aware visual generation and deterministic layout for AI agents",
+  "mcpName": "io.github.utkarshx27/visualspec",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
+    "visualspec": "./bin/visual.js",
     "visual": "./bin/visual.js",
     "vspec": "./bin/visual.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/utkarshx27/visualspec.git"
+  },
+  "homepage": "https://github.com/utkarshx27/visualspec#readme",
+  "bugs": {
+    "url": "https://github.com/utkarshx27/visualspec/issues"
   },
   "type": "module",
   "scripts": {
@@ -15,17 +25,30 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "visual": "tsx src/cli/index.ts",
-    "mcp": "tsx src/mcp/index.ts"
+    "mcp": "tsx src/mcp/index.ts",
+    "prepack": "npm run build"
   },
+  "files": [
+    "dist",
+    "bin",
+    "schemas",
+    "platforms",
+    "templates",
+    "skills",
+    "docs",
+    "examples"
+  ],
   "keywords": [
     "visual-generation",
     "ai-agents",
     "generative-ai",
     "deterministic-rendering",
     "design-system",
-    "social-media"
+    "social-media",
+    "mcp",
+    "model-context-protocol"
   ],
-  "author": "",
+  "author": "utkarshx27",
   "license": "Apache-2.0",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0",
