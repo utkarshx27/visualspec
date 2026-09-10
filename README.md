@@ -10,12 +10,6 @@
 
 ---
 
-<p align="center">
-  <img src="assets/comparison.png" alt="VisualSpec vs Monolithic AI Image Models" width="100%" />
-</p>
-
----
-
 ## 💡 The Core Problem
 
 Most image-generation workflows fail for social and marketing graphics because a single natural-language prompt is expected to handle too many concerns at once:
@@ -80,10 +74,6 @@ Model Adapter           Deterministic Layout
 ---
 
 ## ⚡ Quickstart
-
-<p align="center">
-  <img src="assets/demo.gif" alt="VisualSpec CLI Demo" width="100%" />
-</p>
 
 ### Installation
 
@@ -175,10 +165,6 @@ output/demo-launch/
 ---
 
 ## 🛠 Supported Platforms & Templates
-
-<p align="center">
-  <img src="assets/showcase.png" alt="VisualSpec Sample Outputs" width="100%" />
-</p>
 
 ### Platforms
 - **Instagram**: Feed portrait (1080x1350, 4:5), Square (1080x1080, 1:1), Story (1080x1920, 9:16).
