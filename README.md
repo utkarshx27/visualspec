@@ -81,6 +81,10 @@ Model Adapter           Deterministic Layout
 
 ## ⚡ Quickstart
 
+<p align="center">
+  <img src="assets/demo.gif" alt="VisualSpec CLI Demo" width="100%" />
+</p>
+
 ### Installation
 
 ```bash
@@ -185,10 +189,6 @@ output/demo-launch/
 - **Product Launch**: High-impact headline, feature pill, product visual region, supporting subhead.
 - **Quote Card**: Center-focused editorial quote, author attribution, minimal atmospheric glow.
 - **Stat Card**: Large numeric hero metric, descriptive label, and data context notes.
-
-<p align="center">
-  <img src="assets/showcase.png" alt="VisualSpec Template Showcase" width="100%" />
-</p>
 
 ---
 
