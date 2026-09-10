@@ -6,9 +6,9 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "visualspec": "./bin/visualspec.js",
-    "visual": "./bin/visual.js",
-    "vspec": "./bin/vspec.js"
+    "visualspec": "bin/visualspec.js",
+    "visual": "bin/visual.js",
+    "vspec": "bin/vspec.js"
   },
   "repository": {
     "type": "git",
