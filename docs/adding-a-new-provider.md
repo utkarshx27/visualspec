@@ -65,6 +65,6 @@ const adapters = {
 ## 3. Test Provider
 
 ```bash
-npx visual compile examples/product-launch/spec.yaml --provider custom
-npx visual generate examples/product-launch/spec.yaml --provider custom
+npx @utkarshx27/visualspec compile examples/product-launch/spec.yaml --provider custom
+npx @utkarshx27/visualspec generate examples/product-launch/spec.yaml --provider custom
 ```

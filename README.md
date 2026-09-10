@@ -122,19 +122,19 @@ npm run build
 ### 1. Initialize a Project
 
 ```bash
-npx visual init
+npx @utkarshx27/visualspec init
 ```
 
 ### 2. Validate a Visual Spec
 
 ```bash
-npx visual validate examples/product-launch/spec.yaml
+npx @utkarshx27/visualspec validate examples/product-launch/spec.yaml
 ```
 
 ### 3. Inspect the Compiled Generation Prompt
 
 ```bash
-npx visual compile examples/product-launch/spec.yaml --provider openai
+npx @utkarshx27/visualspec compile examples/product-launch/spec.yaml --provider openai
 ```
 
 ### 4. Deterministic Render (No API Key Required)
@@ -142,19 +142,19 @@ npx visual compile examples/product-launch/spec.yaml --provider openai
 Render layout, typography, and background styling locally:
 
 ```bash
-npx visual render examples/product-launch/spec.yaml --output ./output/demo-launch
+npx @utkarshx27/visualspec render examples/product-launch/spec.yaml --output ./output/demo-launch
 ```
 
 ### 5. Run the Full Generation Pipeline
 
 ```bash
-npx visual generate examples/product-launch/spec.yaml --provider mock --output ./output/demo-launch
+npx @utkarshx27/visualspec generate examples/product-launch/spec.yaml --provider mock --output ./output/demo-launch
 ```
 
 ### 6. Verify Asset Quality with Visual QA
 
 ```bash
-npx visual check ./output/demo-launch/final.png --spec examples/product-launch/spec.yaml
+npx @utkarshx27/visualspec check ./output/demo-launch/final.png --spec examples/product-launch/spec.yaml
 ```
 
 ---

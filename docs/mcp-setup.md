@@ -100,7 +100,7 @@ You can also test the stdio server directly:
 npm run mcp
 
 # Via CLI
-npx visual mcp
+npx @utkarshx27/visualspec mcp
 ```
 
 Or inspect tools interactively using the official MCP Inspector:
