@@ -9,3 +9,4 @@ tests/
 .github/
 visual-generation-superpowers-implementation-plan.md
 vitest.config.ts
+mcp-publisher.exe
