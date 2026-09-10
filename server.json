@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.utkarshx27/visualspec",
+  "title": "VisualSpec",
+  "description": "Structured, constraint-aware visual generation and deterministic layout for AI agents",
+  "repository": {
+    "url": "https://github.com/utkarshx27/visualspec",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@utkarshx27/visualspec",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "OPENAI_API_KEY",
+          "description": "Optional API key for OpenAI image generation",
+          "isRequired": false,
+          "isSecret": true
+        },
+        {
+          "name": "GEMINI_API_KEY",
+          "description": "Optional API key for Google Gemini image generation",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
