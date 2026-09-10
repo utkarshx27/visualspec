@@ -1,12 +1,27 @@
 # VisualSpec
 
-> **Structured, constraint-aware visual generation and deterministic layout for AI agents.**  
-> Convert creative intent into platform-ready, brand-compliant visual assets without hallucinated typography.
+> **Deterministic visual generation for AI agents.**  
+> AI creates the imagery. VisualSpec guarantees the typography and layout.
 
-[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-0.1.0-brightgreen.svg)](package.json)
-[![Tests](https://img.shields.io/badge/tests-28%20passed-brightgreen.svg)]()
-[![MCP](https://img.shields.io/badge/MCP-compatible-purple.svg)](docs/mcp-setup.md)
+<p align="center">
+  <img src="assets/demo.gif" alt="VisualSpec Generation Pipeline Demo" width="100%" />
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/@utkarshx27/visualspec"><img src="https://img.shields.io/npm/v/@utkarshx27/visualspec?color=cb3837&logo=npm" alt="npm package" /></a>
+  <a href="https://registry.modelcontextprotocol.io"><img src="https://img.shields.io/badge/MCP%20Registry-io.github.utkarshx27%2Fvisualspec-purple.svg" alt="MCP Registry" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" alt="License" /></a>
+  <img src="https://img.shields.io/badge/tests-28%20passed-brightgreen.svg" alt="Tests" />
+  <a href="https://github.com/utkarshx27/visualspec"><img src="https://img.shields.io/github/stars/utkarshx27/visualspec?style=social" alt="GitHub stars" /></a>
+</p>
+
+```bash
+# Instant workspace setup (no clone required)
+npx @utkarshx27/visualspec init
+
+# Launch local MCP Server for Cursor, Claude Desktop, or Antigravity
+npx @utkarshx27/visualspec mcp
+```
 
 ---
 
