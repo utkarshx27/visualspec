@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { execSync } from "node:child_process";
 import sharp from "sharp";
 
 async function createDemoGif() {
@@ -343,54 +344,30 @@ async function createDemoGif() {
   ];
 
   console.log("Rendering 5 high-res frames with Sharp...");
-  const buffers: Buffer[] = [];
+  const tempFiles: string[] = [];
   for (let i = 0; i < framesSvg.length; i++) {
-    const buf = await sharp(Buffer.from(framesSvg[i]))
-      .png()
-      .toBuffer();
-    buffers.push(buf);
+    const framePath = path.join(assetsDir, `temp-frame-${i}.png`);
+    await sharp(Buffer.from(framesSvg[i])).png().toFile(framePath);
+    tempFiles.push(framePath);
   }
 
-  // Also save a standalone hero poster image
+  const outGifPath = path.join(assetsDir, "demo.gif");
   const posterPath = path.join(assetsDir, "demo-preview.png");
-  await sharp(Buffer.from(framesSvg[4])).png().toFile(posterPath);
+  fs.copyFileSync(tempFiles[4], posterPath);
   console.log(`Saved static poster image: ${posterPath}`);
 
-  // Create vertical strip for multi-page GIF
-  console.log("Combining frames into animated GIF...");
-  const totalHeight = height * buffers.length;
-  const compositeInputs = buffers.map((buf, idx) => ({
-    input: buf,
-    top: idx * height,
-    left: 0,
-  }));
+  console.log("Assembling multi-frame animated GIF with Pillow...");
+  const pyScriptPath = path.resolve(process.cwd(), "scripts", "make_gif.py");
+  const args = [pyScriptPath, outGifPath, ...tempFiles].map(a => `"${a}"`).join(" ");
+  execSync(`python ${args}`, { stdio: "inherit" });
 
-  const stacked = await sharp({
-    create: {
-      width,
-      height: totalHeight,
-      channels: 4,
-      background: "#090d16"
-    }
-  })
-    .composite(compositeInputs)
-    .png()
-    .toBuffer();
-
-  const outGifPath = path.join(assetsDir, "demo.gif");
-  // Frame delays in milliseconds: 2600ms, 2600ms, 2600ms, 2600ms, 3500ms
-  const delays = [2600, 2600, 2600, 2600, 3500];
-
-  await sharp(stacked)
-    .gif({
-      pageHeight: height,
-      loop: 0,
-      delay: delays,
-    })
-    .toFile(outGifPath);
+  // Clean up temp files
+  for (const f of tempFiles) {
+    if (fs.existsSync(f)) fs.unlinkSync(f);
+  }
 
   const stats = fs.statSync(outGifPath);
-  console.log(`✓ Animated Demo GIF created successfully!`);
+  console.log(`✓ Animated Demo GIF created!`);
   console.log(`  Path: ${outGifPath}`);
   console.log(`  Size: ${(stats.size / 1024).toFixed(1)} KB`);
 }
