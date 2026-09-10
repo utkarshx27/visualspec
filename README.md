@@ -10,7 +10,7 @@
 
 ---
 
-## 💡 The Core Problem
+##  The Core Problem
 
 Most image-generation workflows fail for social and marketing graphics because a single natural-language prompt is expected to handle too many concerns at once:
 - subject & background
@@ -21,7 +21,7 @@ Most image-generation workflows fail for social and marketing graphics because a
 
 Image models frequently hallucinate gibberish text, truncate words, or disregard composition rules.
 
-## 🚀 The Solution: Layer Separation
+##  The Solution: Layer Separation
 
 **VisualSpec** separates generative concerns from deterministic concerns:
 
@@ -63,7 +63,7 @@ Model Adapter           Deterministic Layout
 
 ---
 
-## 📚 Documentation
+##  Documentation
 
 - [Architecture & Design Principles](docs/architecture.md)
 - [VisualSpec Schema & Contract](docs/visual-spec.md)
@@ -73,7 +73,7 @@ Model Adapter           Deterministic Layout
 
 ---
 
-## ⚡ Quickstart
+##  Quickstart
 
 ### Installation
 
@@ -124,7 +124,7 @@ npx visual check ./output/demo-launch/final.png --spec examples/product-launch/s
 
 ---
 
-## 🔌 Model Context Protocol (MCP) Server
+##  Model Context Protocol (MCP) Server
 
 VisualSpec runs as a native MCP server over `stdio`, enabling AI coding assistants (Cursor, Claude Code, Gemini CLI, and Antigravity IDE) to invoke visual tools directly:
 
@@ -148,7 +148,7 @@ See the [MCP Setup Guide](docs/mcp-setup.md) for Cursor, Claude Desktop, and Ant
 
 ---
 
-## 📦 Output Bundle
+##  Output Bundle
 
 Every generation creates a complete, reproducible debug bundle:
 
@@ -164,7 +164,7 @@ output/demo-launch/
 
 ---
 
-## 🛠 Supported Platforms & Templates
+##  Supported Platforms & Templates
 
 ### Platforms
 - **Instagram**: Feed portrait (1080x1350, 4:5), Square (1080x1080, 1:1), Story (1080x1920, 9:16).
@@ -178,7 +178,7 @@ output/demo-launch/
 
 ---
 
-## 🤖 Agent Skills
+##  Agent Skills
 
 The framework includes 10 standardized skill definitions located in `./skills/`:
 - `using-visualspec`: Master workflow instructions.
@@ -194,7 +194,7 @@ The framework includes 10 standardized skill definitions located in `./skills/`:
 
 ---
 
-## 🗺 Roadmap & Open Contributions
+##  Roadmap & Open Contributions
 
 We welcome contributions! Key areas to build together:
 - [ ] **Additional Platforms**: X/Twitter (Header, Post), YouTube Thumbnails, Pinterest, TikTok Cover.
@@ -205,7 +205,7 @@ We welcome contributions! Key areas to build together:
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please check our:
 - [Contributing Guidelines](CONTRIBUTING.md)
@@ -213,7 +213,7 @@ Contributions are welcome! Please check our:
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 Run the automated test suite:
 
@@ -225,6 +225,6 @@ All 28 tests run offline without requiring any third-party API keys.
 
 ---
 
-## 📄 License
+##  License
 
 Licensed under the [Apache License, Version 2.0](LICENSE).
